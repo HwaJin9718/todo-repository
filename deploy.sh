@@ -22,7 +22,7 @@ fi
 uv sync
 
 echo "4. 서버 백그라운드 실행"
-nohub uv run uvicorn main:app --host 0.0.0.0 --port 8000 \ > /dev/null 2>&1 < /dev/null &
+nohup uv run uvicorn main:app --host 0.0.0.0 --port 8000 \ > /dev/null 2>&1 < /dev/null &
 
 echo $! > app.pid
 
